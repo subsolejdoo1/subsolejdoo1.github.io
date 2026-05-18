@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SUB SOLE j.d.o.o.</title>
+<style>
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background: linear-gradient(180deg, #1e0f33 0%, #0c1a2a 100%);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+a { color: #fff; text-decoration: none; }
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(30,15,51,0.95);
+    padding: 15px 0;
+    z-index: 1000;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+nav ul li { margin: 0 15px; }
+nav ul li a:hover { text-decoration: underline; }
+header {
+    background: linear-gradient(135deg, #5a0d8b, #00bfa5);
+    text-align: center;
+    padding: 120px 20px;
+    position: relative;
+}
+header h1 { font-size: 3em; margin-bottom: 20px; transition: transform 0.3s; }
+header h1:hover { transform: scale(1.05); }
+header p { font-size: 1.2em; max-width: 700px; margin: 0 auto; }
+.cta {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #9c27b0, #00bfa5);
+    color: #fff;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+.cta:hover { 
+    background: linear-gradient(90deg, #7b1fa2, #00d3c2); 
+    transform: translateY(-3px);
+}
+section {
+    padding: 80px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 30px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease-out;
+}
+section.show { opacity: 1; transform: translateY(0); }
+section:nth-child(even) { background: linear-gradient(135deg, #2b1b4d, #004d40); }
+h2 { 
+    text-align: center; 
+    margin-bottom: 20px; 
+    font-size: 2.2em; 
+    transition: color 0.3s, transform 0.3s; 
+}
+h2:hover { color: #00bfa5; transform: scale(1.05); }
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 25px;
+}
+.card {
+    background: linear-gradient(145deg, #3b2570, #00796b);
+    border-radius: 35px;
+    padding: 30px;
+    flex: 1 1 280px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover { transform: translateY(-10px); box-shadow: 0 10px 25px rgba(0,0,0,0.4); }
+.card img {
+    max-width: 100%;
+    border-radius: 25px;
+    margin-bottom: 15px;
+}
+.separator {
+    width: 80px;
+    height: 5px;
+    background: linear-gradient(90deg, #00bfa5, #9c27b0);
+    margin: 20px auto;
+    border-radius: 5px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 15px;
+}
+form input, form textarea {
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    font-size: 1em;
+}
+form button {
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #9c27b0, #00bfa5);
+    color: #fff;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+form button:hover { 
+    background: linear-gradient(90deg, #7b1fa2, #00d3c2);
+    transform: translateY(-3px);
+}
+footer {
+    background: linear-gradient(135deg, #1e0f33, #004d40);
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.9em;
+    border-radius: 25px 25px 0 0;
+}
+.error { color: #ff6666; font-size: 0.9em; }
+.success { color: #66ff99; font-size: 1em; text-align: center; }
+.visual-element {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #00bfa5, #9c27b0);
+    opacity: 0.2;
+    z-index: 1;
+}
+.contact-info {
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+.contact-info a { text-decoration: underline; color: #00bfa5; }
+.mission-vision {
+    text-align: center;
+    font-size: 1.2em;
+}
+</style>
+</head>
+<body>
+
+<nav>
+<ul>
+<li><a href="#services">Usluge</a></li>
+<li><a href="#advantages">Prednosti</a></li>
+<li><a href="#process">Proces</a></li>
+<li><a href="#about">O nama</a></li>
+<li><a href="#mission">Misija</a></li>
+<li><a href="#vision">Vizija</a></li>
+<li><a href="#values">Vrijednosti</a></li>
+<li><a href="#contact">Kontakt</a></li>
+</ul>
+</nav>
+
+<header>
+<div class="visual-element" style="top:30px; left:30px;"></div>
+<div class="visual-element" style="bottom:30px; right:50px;"></div>
+<h1>SUB SOLE j.d.o.o.</h1>
+<p>Vaš partner za oglašavanje, profesionalne, znanstvene i tehničke usluge te IT podršku.</p>
+<a href="#contact" class="cta">Zatraži konzultaciju</a>
+</header>
+
+<section id="services">
+<h2>Naše usluge</h2>
+<div class="separator"></div>
+<div class="cards">
+<div class="card">
+<img src="https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&h=500" alt="Oglašavanje">
+<h3>Oglašavanje</h3>
+<p>Kreativne kampanje i oglašivačka rješenja koja povećavaju vidljivost vašeg brenda.</p>
+</div>
+<div class="card">
+<img src="https://images.pexels.com/photos/3861970/pexels-photo-3861970.jpeg?auto=compress&cs=tinysrgb&h=500" alt="Profesionalne usluge">
+<h3>Profesionalne usluge</h3>
+<p>Stručne i savjetodavne usluge u poslovanju, administraciji i tehničkim procesima.</p>
+</div>
+<div class="card">
+<img src="https://images.pexels.com/photos/7988125/pexels-photo-7988125.jpeg" alt="Znanstvene usluge">
+<h3>Znanstvene i tehničke usluge</h3>
+<p>Tehnički i znanstveni savjeti za optimizaciju poslovanja i inovacije.</p>
+</div>
+<div class="card">
+<img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&h=500" alt="Oglašivačke agencije">
+<h3>Oglašivačke agencije</h3>
+<p>Podrška agencijama u kreativnim i strateškim kampanjama.</p>
+</div>
+<div class="card">
+<img src="https://images.pexels.com/photos/8171308/pexels-photo-8171308.jpeg" alt="IT podrška">
+<h3>IT podrška</h3>
+<p>Implementacija, održavanje i optimizacija IT sustava za učinkovito poslovanje.</p>
+</div>
+</div>
+</section>
+
+<section id="advantages">
+<h2>Naše prednosti</h2>
+<div class="separator"></div>
+<div class="cards">
+<div class="card"><h3>Iskustvo</h3><p>Dugogodišnje iskustvo u oglašavanju i tehničkoj podršci.</p></div>
+<div class="card"><h3>Kreativnost</h3><p>Inovativna rješenja i kreativne kampanje prilagođene klijentima.</p></div>
+<div class="card"><h3>Pouzdanost</h3><p>Transparentnost i kvalitetno izvršenje svakog projekta.</p></div>
+</div>
+</section>
+
+<section id="process">
+<h2>Naš proces</h2>
+<div class="separator"></div>
+<div class="cards">
+<div class="card"><h3>1. Analiza</h3><p>Razumijemo potrebe i ciljeve klijenta.</p></div>
+<div class="card"><h3>2. Planiranje</h3><p>Pripremamo strategiju i detaljan plan akcije.</p></div>
+<div class="card"><h3>3. Implementacija</h3><p>Provodimo planirane aktivnosti i pratimo rezultate.</p></div>
+<div class="card"><h3>4. Podrška</h3><p>Stalna podrška i optimizacija rješenja.</p></div>
+</div>
+</section>
+
+<section id="about">
+<h2>O nama</h2>
+<div class="separator"></div>
+<p>SUB SOLE j.d.o.o. pruža profesionalne, znanstvene, tehničke i oglašivačke usluge te IT podršku za tvrtke i agencije. Naš cilj je unaprijediti poslovne procese i kreativne projekte naših klijenata.</p>
+</section>
+
+<section id="mission">
+<h2>Naša misija</h2>
+<div class="separator"></div>
+<p class="mission-vision">Pružati visoko kvalitetne i inovativne usluge u oglašavanju i tehničkoj podršci, pomažući klijentima u rastu i uspjehu.</p>
+</section>
+
+<section id="vision">
+<h2>Naša vizija</h2>
+<div class="separator"></div>
+<p class="mission-vision">Postati vodeći partner u oglašivačkim, profesionalnim i tehničkim uslugama u regiji, prepoznatljiv po kvaliteti i inovacijama.</p>
+</section>
+
+<section id="values">
+<h2>Naše vrijednosti</h2>
+<div class="separator"></div>
+<div class="cards">
+<div class="card"><h3>Inovacija</h3><p>Uvijek tražimo nova rješenja i tehnologije.</p></div>
+<div class="card"><h3>Kvaliteta</h3><p>Svaki projekt realiziramo s najvišim standardima.</p></div>
+<div class="card"><h3>Pouzdanost</h3><p>Transparentnost i profesionalnost u svakom koraku.</p></div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Kontaktirajte nas</h2>
+<div class="separator"></div>
+<div class="contact-info">
+<p>📍 Trg Ploča 12, 21460, Stari Grad, Splitsko-dalmatinska županija</p>
+<p>📧 <a href="mailto:direct@subsolejdoo.org">direct@subsolejdoo.org</a></p>
+</div>
+<form id="contactForm">
+<input type="text" id="name" placeholder="Ime i prezime" required>
+<input type="email" id="email" placeholder="Email" required>
+<textarea id="message" rows="5" placeholder="Vaša poruka" required></textarea>
+<button type="submit">Pošalji</button>
+<div class="error" id="error"></div>
+<div class="success" id="success"></div>
+</form>
+</section>
+
+<footer>
+&copy; 2026 SUB SOLE j.d.o.o. Sva prava pridržana.
+</footer>
+
+<script>
+const sections = document.querySelectorAll('section');
+window.addEventListener('scroll', () => {
+sections.forEach(section => {
+    const top = section.getBoundingClientRect().top;
+    const screenHeight = window.innerHeight;
+    if(top < screenHeight - 100){
+        section.classList.add('show');
+    }
+});
+});
+const form = document.getElementById('contactForm');
+const error = document.getElementById('error');
+const success = document.getElementById('success');
+form.addEventListener('submit', function(e){
+e.preventDefault();
+error.textContent='';
+success.textContent='';
+const name = document.getElementById('name').value.trim();
+const email = document.getElementById('email').value.trim();
+const message = document.getElementById('message').value.trim();
+if(!name||!email||!message){error.textContent='Molimo ispunite sva polja.';return;}
+const emailRegex=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if(!emailRegex.test(email)){error.textContent='Molimo unesite ispravnu email adresu.';return;}
+success.textContent='Hvala! Vaša poruka je primljena.';
+form.reset();
+});
+</script>
+
+</body>
+</html>
